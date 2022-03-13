@@ -39,6 +39,7 @@ const config = {
         },
 	gtag: {
           trackingID: 'G-BJZT0J79LJ',
+	  anonymizeIP: true,
         },
       }),
     ],
