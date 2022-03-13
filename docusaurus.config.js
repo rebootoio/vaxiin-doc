@@ -25,7 +25,7 @@ const config = {
 	  routeBasePath: '/',
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
-          //editUrl: 'https://github.com/rebootoio/vaxiin-doc/tree/main/packages/create-docusaurus/templates/shared/',
+          editUrl: 'https://github.com/rebootoio/vaxiin-doc/edit/main/',
         },
         blog: false,
         // blog: {
@@ -57,7 +57,7 @@ const config = {
             label: 'About us',
           },
           {
-            href: 'https://github.com/rebootoio/vaxiin-server',
+            href: 'https://github.com/rebootoio/vaxiin-sandbox',
             label: 'GitHub',
             position: 'right',
           },
