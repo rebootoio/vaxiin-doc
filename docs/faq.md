@@ -10,6 +10,8 @@ We currently support the following models:
 
 Our future plans include actual server make & model detection, and mapping of those to out-of-band device generations.
 
+**If you'd like support for additional models, please open a feature request [here](https://github.com/rebootoio/vaxiin-server/issues).**
+
 ### Where can I find ready-made rules and actions?
 
 We're working on such a repo and will make it available once it's ready.
