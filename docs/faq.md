@@ -7,6 +7,7 @@ title: Frequently Asked Questions
 
 We currently support the following models:
 - idrac9
+- ilo5
 
 Our future plans include actual server make & model detection, and mapping of those to out-of-band device generations.
 
