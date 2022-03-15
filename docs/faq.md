@@ -17,6 +17,25 @@ Our future plans include actual server make & model detection, and mapping of th
 
 We're working on such a repo and will make it available once it's ready.
 
+### Can I add a screenshot I obtained myself and generate a state out of it?
+Sure! First, make sure the screenshot is in PNG format.
+
+Next, base64 encode it doing something like:
+```
+base64 -i image.png -o image-base64.txt
+```
+Now you can generate a state file by doing:
+```
+echo -n 'screenshot: ' > my_state.yaml
+cat image-base64.txt >> my_state.yaml
+echo 'device_uid: test_device' >> my_state.yaml
+```
+Finally, load it into Vaxiin by running:
+```
+vaxctl create state -f my_state.yaml
+```
+
+
 ### What's the dependency structure here?
 
 1. Creds (independent)
