@@ -7,7 +7,7 @@ slug: /
 
 ### Why Vaxiin?
 
-**Vaxiin solves the “No OS recovery” problem.** It’s a scenario you encounter during server reboot, where the server fails to boot into the OS, or lacks in-band networking capabilities. To recover a system from this state, you would typically have to connect to its out-of-band management, review what is displayed on screen, and follow a recovery procedure. This while process is:
+**Vaxiin solves the “No OS recovery” problem.** It’s a scenario you encounter during server reboot, where the server fails to boot into the OS, or lacks in-band networking capabilities. To recover a system from this state, you would typically have to connect to its out-of-band management, review what is displayed on screen, and follow a recovery procedure. This whole process is:
 * Completely manual
 * Utterly boring
 * Frustrating especially when latency is high
