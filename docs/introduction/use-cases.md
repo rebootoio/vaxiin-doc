@@ -27,7 +27,7 @@ It rebooted. And the OS was coming up. But then it just had to run fsck on the r
 
 ### The BSOD
 
-You’re running Windows. It blue screens. Brains.
+You’re running Windows. It blue screens. Brains.  
 It could just as well be a Linux kernel panic. Brains #2.
 
 ### Factory pre-loaded settings

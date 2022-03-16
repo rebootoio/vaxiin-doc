@@ -127,4 +127,5 @@ vaxctl get rule
 ```
 
 ### Summary & next steps
-**Congratulations!** You’ve completed the Vaxiin walkthrough and you’re now officially a zombie healer. Go ahead and explore the additional action types to start constructing your own rules.
+**Congratulations!** You’ve completed the Vaxiin walkthrough and you’re now officially a zombie healer.
+Go ahead and explore the additional [action types](../cli-reference/create#action) to start constructing your own rules.

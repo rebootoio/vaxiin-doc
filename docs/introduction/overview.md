@@ -33,4 +33,4 @@ There are 3 components to Vaxiin:
 
 ### And the name, Vaxiin?
 
-You might think that the best thing to do with zombies is to kill them. But you can actually do better than that - you can bring them back to life. All you need is the right cure. Get it?
+You might think that the best thing to do with zombies is to kill them. But you can actually do better than that - you can bring them back to life. All you need is the right cure.
