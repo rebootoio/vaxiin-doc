@@ -69,7 +69,8 @@ $ vaxctl get rule
 ```
 
 ### SCREENSHOT
-GET the screenshot stored inside a state by converting it to a PNG file. This will essentially base64 decode the screenshot string and store it to a file on the local filesystem. You can then use a local image viewer to view the resulting image.
+GET the screenshot stored inside a state by converting it to a PNG file. This will essentially base64 decode the screenshot string and store it to a file on the local filesystem.  
+If you specify where to save the file, we'll save it and exit. If you don't, we'll save it to a temporary location and open the system viewer to display it.
 
 ### WORK
 GET the list of work items pending execution by the server, or that have already completed.
