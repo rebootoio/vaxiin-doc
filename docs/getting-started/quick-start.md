@@ -5,8 +5,8 @@ title: Quick Start
 
 To get a quick feel for Vaxiin and what it can do for you, we've created a sandbox environment for you to test things out.
 
-The environment includes the vaxiin-server and vaxiin-handler components, as well as some pre-loaded actions for you to play around with.
-It does assume you will be providing a test server, matching one of the [supported models](../faq#what-models-do-you-support).
+The environment includes the vaxiin-server and some pre-loaded actions for you to play around with.
+It assumes you will be providing a test server, matching one of the [supported models](../faq#what-models-do-you-support).
 
 You can download the environment [from GitHub](https://github.com/rebootoio/vaxiin-sandbox) and find instructions inside to get you going.
 

@@ -39,4 +39,4 @@ The thing binding actions to a state. It’s the “when you see this kind of zo
 ### Work
 
 *Go out and cure those zombies!*  
-The act of assigning a handler to perform an action against a device. It could be obtaining a new state, attempting recovery via a specific rule or running the whole list of them by order.
+The act of assigning an to perform against a device. It could be obtaining a new state, attempting recovery via a specific rule or running the whole list of them by order.

@@ -28,10 +28,9 @@ We can do better than that. Enter... Vaxiin!
 
 ### Basic architecture of Vaxiin
 
-There are 3 components to Vaxiin:
+There are 2 components to Vaxiin:
 * **The Agent** runs on your servers while they’re alive. Its basic role is to send a simple ping to the Vaxiin server, as a form of a [dead man’s switch](https://en.wikipedia.org/wiki/Dead_man%27s_switch). It’s what allows Vaxiin to run a fully automated zombie recovery process.
-* **The Handler** performs the heavy lifting job of interacting with zombies to check their status and attempt recovery. It’s the part one would typically scale out to parallelize the process of diagnostics & recovery.
-* **The Server** handles all API calls from agents, handlers and human operators. But you don’t need to interact with it directly - that’s what the CLI is there for.
+* **The Server** handles all API calls from agents and operators. But you don’t need to interact with it directly - that’s what the CLI is there for.
 
 ### And the name, Vaxiin?
 
