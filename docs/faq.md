@@ -6,11 +6,18 @@ title: Frequently Asked Questions
 ### What models do you support?
 
 We currently support the following models:
-- idrac9
-- ilo5
-- ilo4
 
-Our future plans include actual server make & model detection, and mapping of those to out-of-band device generations.
+|   Vendor   |  Model |
+|:----------:|:------:|
+| Dell       | idrac9 |
+| HPE        | ilo5   |
+| HPE        | ilo4   |
+| SuperMicro | x10    |
+
+So if your server is a SuperMicro x10, you would use the following key/value:
+```
+model: x10
+```
 
 **If you'd like support for additional models, please open a feature request [here](https://github.com/rebootoio/vaxiin-server/issues).**
 
