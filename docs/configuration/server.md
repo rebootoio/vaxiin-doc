@@ -10,19 +10,19 @@ The configuration file accepts the parameters below:
 
 |            Key name                |                                    Description                                        | Default |
 |:----------------------------------:|:-------------------------------------------------------------------------------------:|:-------:|
-| host                               | Address to listen on                                                                  | 0.0.0.0 |
-| port                               | Port to listen on                                                                     |    5000 |
-| db_path                            | Path to the directory where the databse will be stored                                |   /db   |
-| get_states                         | Should it automatically get screenshot and generate states for zombies                |  TRUE   |
-| run_rules                          | Should it automatically run rules against matching states                             |  FALSE  |
-| periodic_work_assignment_interval  | How often should we try and match open states to rules                                |     300 |
-| get_zombie_screenshot_interval     | How often should we get a new screenshot for zombies                                  |     300 |
-| retry_rule_interval                | How long after a rule has attempted recovery should we run it again                   |      60 |
-| update_state_interval              | How long after a rule has attempted recovery should we get a new screenshot           |      60 |
-| pending_work_interval              | After often should we check for stuck work                                            |      10 |
-| pending_work_timeout               | After how long a work has been pending should we mark it as failed due to timeout     |      30 |
-| become_zombie_interval             | How long since the last heartbeat should a device be marked as a zombie               |     120 |
-| mark_zombie_interval               | How often should we check if a device should be marked as a zombie                    |      10 |
-| check_work_interval                | How often should it poll the server for new work (in seconds)                         |       1 |
-| max_parallel_work                  | How much assigned work can run in parallel                                            |       3 |
-| pause_between_keys                 | How long to wait after pressing a special key (enter, esc ctrl+r, etc) (in seconds)   |       5 |
+| host                               | IP address server listens on                                                          | 0.0.0.0 |
+| port                               | TCP port server listens on                                                            |    5000 |
+| db_path                            | Path to directory storing the database file                                           |   /db   |
+| get_states                         | Enable automatic screenshot collection and state generation for zombies               |  TRUE   |
+| run_rules                          | Enable automatic execution of rules and contained actions against matching states     |  FALSE  |
+| periodic_work_assignment_interval  | Interval for matching open states to rules (minutes)                                  |     300 |
+| get_zombie_screenshot_interval     | Interval for obtaining new screenshots for zombies (minutes)                          |     300 |
+| retry_rule_interval                | Interval for retrying a rule following a previous run (minutes)                       |      60 |
+| update_state_interval              | Interval for obtaining a screenshot following an attempted recovery (minutes)         |      60 |
+| pending_work_interval              | Interval for checking work status (minutes)                                           |      10 |
+| pending_work_timeout               | Threshold interval between work assignment and marking it as timed out (minutes)      |      30 |
+| become_zombie_interval             | Threshold interval between last heartbeat and marking device as a zombie (minutes)    |     120 |
+| mark_zombie_interval               | Interval for sweeping all devices with a registered heartbeat for zombies (minutes)   |      10 |
+| check_work_interval                | Interval between checks for new work (seconds)                                        |       1 |
+| max_parallel_work                  | Number of parallel work execution threads                                             |       3 |
+| pause_between_keys                 | Pause interval between pressing of keys (does not apply to strings) (seconds)         |       5 |

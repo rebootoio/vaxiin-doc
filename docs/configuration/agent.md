@@ -10,12 +10,12 @@ The configuration file accepts the parameters below:
 
 |      Key name      |                 Description                 |          Default          |
 |:------------------:|:-------------------------------------------:|:-------------------------:|
-| host               | Address to listen on                        | 127.0.0.1                 |
-| port               | Port to listen on                           |                      4000 |
-| vaxiin_server_url  | Location of server                          | http://vaxiin-server:5000 |
-| heartbeat_interval | Interval for sending heartbeat (in minutes) |                        60 |
+| host               | IP address agent listens on                 | 127.0.0.1                 |
+| port               | TCP port agent listen on                    |                      4000 |
+| vaxiin_server_url  | URL of the vaxiin server                    | http://vaxiin-server:5000 |
+| heartbeat_interval | Interval for sending heartbeat (minutes)    |                        60 |
 | uid                | Device unique identifier **(Mandatory)**    |                           |
-| ipmi_ip            | Device IPMI ip **(Mandatory)**              |                           |
+| ipmi_ip            | Device IPMI IP **(Mandatory)**              |                           |
 | model              | Device OOB model **(Mandatory)**            |                           |
 | creds_name         | OOB credentials name to use                 | default                   |
 
