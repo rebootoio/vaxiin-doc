@@ -47,7 +47,7 @@ Sure, here's a short demo of the following actions:
 
 If the terms don't make sense to you (yet), check out the [glossary](introduction/glossary).
 
-![Vaxiin demo](/img/vaxctl_usage_50.gif)
+![Vaxiin demo](/img/vaxctl_usage_33.gif)
 
 ### Okay, I've heard enough - I want to try it
 
