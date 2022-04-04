@@ -36,6 +36,19 @@ There are 2 components to Vaxiin:
 
 You might think that the best thing to do with zombies is to kill them. But you can actually do better than that - you can bring them back to life. All you need is the right cure.
 
+### Can I see a short demo?
+
+Sure, here's a short demo of the following actions:
+- get list of devices
+- get the state of a zombie device
+- get the screenshot of said zombie
+- create a rule to automate zombie recovery
+- get list of rules
+
+If the terms don't make sense to you (yet), check out the [glossary](introduction/glossary).
+
+![Vaxiin demo](/img/vaxctl_usage_50.gif)
+
 ### Okay, I've heard enough - I want to try it
 
 You can jump ahead to [quick start guide](../getting-started/quick-start) to get up and running in a few minutes.
