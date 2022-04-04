@@ -13,7 +13,8 @@ The configuration file accepts the parameters below:
 | host                               | Address to listen on                                                                  | 0.0.0.0 |
 | port                               | Port to listen on                                                                     |    5000 |
 | db_path                            | Path to the directory where the databse will be stored                                |   /db   |
-| automatic_recovery                 | Should it self drive                                                                  |  FALSE  |
+| get_states                         | Should it automatically get screenshot and generate states for zombies                |  TRUE   |
+| run_rules                          | Should it automatically run rules against matching states                             |  FALSE  |
 | periodic_work_assignment_interval  | How often should we try and match open states to rules                                |     300 |
 | get_zombie_screenshot_interval     | How often should we get a new screenshot for zombies                                  |     300 |
 | retry_rule_interval                | How long after a rule has attempted recovery should we run it again                   |      60 |
