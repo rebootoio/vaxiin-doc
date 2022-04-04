@@ -40,12 +40,8 @@ You might think that the best thing to do with zombies is to kill them. But you 
 
 Sure, here's a short demo of the following actions:
 - get list of devices
-- get the state of a zombie device
-- get the screenshot of said zombie
+- get the screenshot of a zombie device
 - create a rule to automate zombie recovery
-- get list of rules
-
-If the terms don't make sense to you (yet), check out the [glossary](introduction/glossary).
 
 ![Vaxiin demo](/img/vaxctl_usage_33.gif)
 
