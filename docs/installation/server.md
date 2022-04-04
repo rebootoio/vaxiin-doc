@@ -9,6 +9,11 @@ To run the server with default configuration and the **database in the current d
 ```
 docker run -d -v $(pwd):/db rebooto/vaxiin-server
 ```
+:::tip
+The default configuration will have the server collecting zombie screenshots, but no rules will run to attempt recovery.
+You can manually perform recovery using [`vaxctl assign`](../cli-reference/assign) or enable automatic recovery via
+the [`run_rules`](../configuration/server) configuration parameter.
+:::
 
 ### Custom configuration
 
