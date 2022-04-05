@@ -93,6 +93,29 @@ The available action types are:
   action_data: 10
   ```
 
+- ### request
+  Send an HTTP GET request. You can use this to interact with other systems (ex. trigger a jenkins job)
+
+  ```
+  name: trigger jenkins cleanup job
+  action_type: request
+  action_data: http://myjenkins:8080/job/My-Clenaup-Job/buildWithParameters?UID={device::uid}&token=iFBDOBhNhaxL4T9ass93HRXun2JF161Z
+  ```
+
+The action_data value can include attributes that will populated according to the device the action is running on.
+
+The synatx is `{BASE_KEY::NESTED_KEY}`. Available attributes:
+
+| BASE KEY | NESTED KEY | DEFINED BY | DESCRIPTION                                            | USAGE               |
+|----------|------------|------------|--------------------------------------------------------|---------------------|
+| device   | uid        | System     | the device's UID                                       | {device::uid}       |
+| device   | ipmi_ip    | System     | the device's ipmi IP                                   | {device::ipmi_ip}   |
+| device   | model      | System     | the device's model                                     | {device::model}     |
+| cred     | username   | System     | the device's cred username                             | {cred::username}    |
+| cred     | password   | System     | the device's cred password                             | {cred::password}    |
+| metadata | *          | User       | the value of the nested key from the device's metadata | {metadata::ANY_KEY} |
+
+
 ## DEVICE
 CREATE a device from a yaml file. Empty, self-documenting yaml files can be created using the [GENERATE](generate) command. Note that the first time a Vaxiin agent contacts the Vaxiin server, it will initiate device creation. So you’d only `CREATE DEVICE` for devices which aren’t running the agent. If you’re wondering about out-of-band credentials, these are created via [CREATE CRED](#cred) and then explicitly specified during device creation, either via agent config or in the device's yaml, as per this example:
 
@@ -101,6 +124,8 @@ uid: test_device
 ipmi_ip: 10.1.1.2
 model: idrac9
 zombie: false
+metadata:
+  fqdn: test-device.rebooto.io
 # highlight-next-line
 creds_name: new_oob_creds
 ```
