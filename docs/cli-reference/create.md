@@ -142,7 +142,7 @@ You cannot use `default` as the name for your credentials, as its a reserved key
 CREATE a state from a yaml file. Empty, self-documenting yaml files can be created using the [GENERATE](generate) command.
 
 ## RULE
-CREATE a rule from a yaml file or via interactive mode. Empty, self-documenting yaml files can be created using the [GENERATE](generate) command. You can set rules as disabled by setting the `enabled` parameter to `false`. You can also chain multiple actions inside a rule, separating them via `,` (colon) character. So you could do something like `reset provisioning state, change boot device, reboot`, as per the yaml example below. As these are actually an array, when using json format, you'd specify `[action1, action2, action3]`.
+CREATE a rule from a yaml file or via interactive mode. Empty, self-documenting yaml files can be created using the [GENERATE](generate) command. You can set rules as disabled by setting the `enabled` parameter to `false`. The rule contains an array of actions that will be run in order so you could do something like `reset provisioning state, change boot device & reboot`, as per the yaml example below.
 
 ```
 name: reset provisioning
@@ -155,3 +155,6 @@ actions:
 enabled: true
 ```
 
+:::info
+When creating a rule it can be done either with a `state_id` (the state's screenshot will be used) or `screenshot` (base64 encoded string), the screenshot is kept in the rule object as reference to show what it was created from. The screenshot & ocr text extracted from it cannot be updated once the rule was created (they are only used during creation). When using the `get` command by default the json/yaml will not contain the screenshot & ocr strings unless the `verbose` flag was set.
+:::

@@ -69,7 +69,7 @@ $ vaxctl get rule
 ```
 
 ### SCREENSHOT
-GET the screenshot stored inside a state by converting it to a PNG file. This will essentially base64 decode the screenshot string and store it to a file on the local filesystem.  
+GET the screenshot stored inside a state or a rule by converting it to a PNG file. This will essentially base64 decode the screenshot string and store it to a file on the local filesystem.
 If you specify where to save the file, we'll save it and exit. If you don't, we'll save it to a temporary location and open the system viewer to display it.
 
 ### WORK
