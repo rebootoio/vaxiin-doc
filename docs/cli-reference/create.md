@@ -11,10 +11,10 @@ Create an action that can be assigned to be performed against a device.
 The available action types are:
 
 - ### keystroke
-  Sends one or more keystrokes to a device. There are two types of keystrokes:
+  Send one or more keystrokes to a device. There are two types of keystrokes:
 
   - #### string
-    Nn ascii string. You can use this to input a username or pass a parameter into a text field. Note that it doesn’t send a newline following the string - you need to use a special key for that (see [key combo](#key-combo)).
+    An ascii string. You can use this to input a username or pass a parameter into a text field. Note that it doesn’t send a newline following the string - you need to use a special key for that (see [key combo](#key-combo)).
 
   - #### key combo
     One or more special keys, along with an optional single character. You can use this to navigate via cursor keys, press *Enter*, and send special key combinations such as *ctrl-c*.
@@ -67,7 +67,7 @@ The available action types are:
   ```
 
 - ### ipmitool
-  Uses [ipmitool](https://github.com/ipmitool/ipmitool) to interact with the device. This one is just a wrapper around ipmitool - you can input whatever ipmitool commands you want and Vaxiin will handle credentials for you. For example, you could use the following yaml to get LAN information from the device’s BMC:
+  Use [ipmitool](https://github.com/ipmitool/ipmitool) to interact with the device. This one is just a wrapper around ipmitool - you can input whatever ipmitool commands you want and Vaxiin will handle credentials for you. For example, you could use the following yaml to get LAN information from the device’s BMC:
 
   ```
   name: ipmi lan print
@@ -85,7 +85,7 @@ The available action types are:
   ```
 
 - ### sleep
-  Sleeps for an N amount of seconds. You use this to wait while stuff happens.
+  Sleep for an N amount of seconds. You use this to wait while stuff happens.
 
   ```
   name: sleep for 10 seconds
@@ -155,6 +155,9 @@ actions:
 enabled: true
 ```
 
+Rules contain within them the state from which they were created. This is so you could go back and see what the original screenshot & OCR text contained.  
+To create a rule, you must specify the state to store within, either via referencing an existing state or by providing a base64 encoded screenshot.
+
 :::info
-When creating a rule it can be done either with a `state_id` (the state's screenshot will be used) or `screenshot` (base64 encoded string), the screenshot is kept in the rule object as reference to show what it was created from. The screenshot & ocr text extracted from it cannot be updated once the rule was created (they are only used during creation). When using the `get` command by default the json/yaml will not contain the screenshot & ocr strings unless the `verbose` flag was set.
+Note that the state within a rule is there only for informational purposes - so you could see which state "inspired" the rule. It's not used for any other purpose, and is therefore immutable following its creation. While you can change the regex of a rule and its actions, you cannot change the state stored within it.
 :::
