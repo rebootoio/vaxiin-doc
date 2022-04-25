@@ -122,4 +122,4 @@ Stay tuned!
 
 Got questions? comments? something not working right? don't hesitate to reach out!  
 - Stop by and chat with us on [Discord](https://discord.gg/aEJ6qwcCGs)  
-- [GitHub issues](https://github.com/rebootoio/vaxiin-sandbox/issues) always get our attention
+- [GitHub issues](https://github.com/rebootoio/vaxiin-server/issues) always get our attention
