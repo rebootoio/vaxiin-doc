@@ -27,13 +27,11 @@ const config = {
           // Please change this to your repo.
           editUrl: 'https://github.com/rebootoio/vaxiin-doc/edit/main/',
         },
-        blog: false,
-        // blog: {
-        //  showReadingTime: true,
-        //  // Please change this to your repo.
-        //  editUrl:
-        //    'https://github.com/rebootoio/vaxiin-doc/tree/main/packages/create-docusaurus/templates/shared/',
-        //},
+        blog: {
+	  blogTitle: 'Vaxiinated',
+	  blogDescription: 'The Vaxiin framework blog',
+          showReadingTime: true,
+        },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
@@ -55,6 +53,11 @@ const config = {
         //  src: 'img/logo.svg',
         //},
         items: [
+	  {
+	    to: 'blog',
+	    label: 'Vaxiin Blog',
+	    position: 'left',
+	  },
           {
             href: 'https://rebooto.io/about',
             position: 'right',
