@@ -3,7 +3,70 @@ sidebar_position: 2
 title: Use Cases
 ---
 
-There are quite a few types of zombies out there. Some are common and you might come across them regardless of your environment. Others, they’re created by a unique combination of circumstances unique to your environment. Here are a few we’ve come across in our travels.
+## The Basics
+
+First and foremost, Vaxiin is meant to simplify interaction with out-of-band management systems. To do so, it covers a few basic use cases.
+
+### Get a screenshot... from the CLI
+
+Instead of having to:
+- Open a browser
+- Find & input to the out-of-band IP
+- Authenticate
+- Navigate to "Remote KVM" & open it
+
+You would do this to get the screenshot:
+```
+$ vaxctl assign work -d device_name -a screenshot
+```
+And this to view it:
+```
+$ vaxctl get screenshot -d device_name
+```
+
+### Abstract credentials away
+
+The time has come to cycle out-of-band credentials. You run your automation across all devices and call it a day.
+A few weeks later, you try to logon via out-of-band, but the new creds don't work. You try the old ones, but they don't work either.
+It must be the set you used in the past... what were they?
+
+Vaxiin makes this headache go away. It keeps credentials in a central store:
+```
+$ vaxctl get cred
+  NAME        USERNAME   PASSWORD                    DEFAULT
+  idrac gen3  root       *************************   Yes
+  idrac gen4  root       *************************   No
+  ilo gen4    Admin      *************************   No
+```
+And lets you assign which credentials it uses with the device:
+```
+$ vaxctl get device
+  UID            IPMI IP     CREDS NAME   MODEL   ZOMBIE   METADATA   AGENT VERSION   LAST HEARTBEAT
+  device1        10.0.0.11   default      idrac9  No
+  device2        10.0.0.12   idrac gen4   idrac9  No
+  device3        10.0.0.13   ilo gen4     ilo5    No
+```
+
+### Run IPMI commands, without the million flags
+
+You just want to reboot it. Really, that's all. But did you remember to escape special characters in the password? or use the lan instead of lanplus interface?
+
+Vaxiin makes this complexity go away. Create the commands once, and use them whenever you like with the stored creds, regardless of make & model:
+```
+$ vaxctl get action -n "power reset"
+  NAME           TYPE    DATA
+  power reset    power   reset
+$ vaxctl assign work -d device_name -a "power reset"
+```
+
+### All of the above... centralised
+
+Running all of these on your laptop is nice. But having them all on a centralised server? even better!
+With Vaxiin, everyone on your team can share IPMI, HTTP and keystroke actions. And switching to new creds on servers becomes a breeze, even when there are stragglers.
+
+## The Advanced
+
+Combining all of the basic use cases with Vaxiin's regex matching capabilities, and the agent's dead-man-switch gives us... an automated way to recover zombies. But what *exactly* do we mean by that? lets review a few high level use cases.
 
 ### Press F1 to continue
 
@@ -38,4 +101,4 @@ You bought new servers. You sent the settings you’d like the factory to preloa
 
 You wanted to set up RAID using this nice handy UI they provide after POST. But then you discover the mouse cursor has this diagonal offset… and it doesn’t click where it’s supposed to. So you find yourself using tabs to navigate. So much for your brains.
 
-**Got any more zombie types worth mentioning? Let us know and we’ll add them to the list.**
+**Got any more use cases worth mentioning? [Let us know!](https://discord.gg/aEJ6qwcCGs)**

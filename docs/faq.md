@@ -26,6 +26,7 @@ model: x10
 We're working on such a repo and will make it available once it's ready.
 
 ### Can I add a screenshot I obtained myself and generate a state out of it?
+
 Sure! First, make sure the screenshot is in PNG format.
 
 Next, base64 encode it doing something like:
@@ -74,17 +75,19 @@ While devices don’t explicitly depend on creds, to connect to an out-of-band i
 
 ### Why is tab completion not picking up new options after installing a new version of vaxctl?
 
-You're probably using zsh. There’s a thread on this issue you can follow [here](https://github.com/spf13/cobra/issues/881).
-
+You're probably using zsh. There’s a thread on this issue you can follow [here](https://github.com/spf13/cobra/issues/881).  
 In the meantime, you can workaround this issue by adding the following to your .zshrc:
 ```
 source <(vaxctl completion zsh)
 ```
 
+### Where can I get help?
+We're happy to help at the [Rebooto Discord Server](https://discord.gg/aEJ6qwcCGs).  
+Found a problem / have a feature request? [Open an issue on GitHub](https://github.com/rebootoio/vaxiin-sandbox/issues).
+
 ### How can I help?
 
-Glad you asked!
-
+Glad you asked!  
 There’s a few ways you can contribute to the zombie cleansing effort:
 - Found a bug? Got an idea? We’re happily accepting pull requests.
 - Help us spread the word by telling others about us. Twitting, blogging, graffiti - whatever works for you.

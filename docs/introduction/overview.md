@@ -1,13 +1,21 @@
 ---
 sidebar_position: 1
 title: Overview
-description: Vaxiin is an out-of-band automation framework allowing for remote state extraction, human and machine recovery emulation, and failure detection. In a nutshell, it helps you handle zombies.
+description: Vaxiin is an out-of-band automation framework allowing for remote state extraction, human and machine recovery emulation, and failure detection. In a nutshell, it keeps zombies at bay.
 slug: /
 ---
 
 ### Why Vaxiin?
 
-**Vaxiin solves the “pre-OS recovery” problem**, where the server fails to boot into the OS or lacks in-band networking capabilities. To recover a system from this state, you would typically have to connect to its out-of-band management, review what is displayed on screen, and follow a recovery procedure.
+Because:
+- You want to **see what's on-screen via out-of-band... from your command line**.
+- You want to **react to what's on-screen without having to open a web interface**.
+- You don't want to deal with **out-of-band authentication across vendors**.
+- You don't want to deal with **ipmitool semantics**.
+- You'd rather be doing something else instead of **"pre-OS recovery"**.
+
+### Pre-OS recovery?
+**When a server fails to boot into the OS or lacks in-band networking capabilities we call its state "pre-OS".** To recover a system from this state, you would typically have to connect to its out-of-band management, review what is on screen, and follow a recovery procedure.
 
 This whole process is:
 * Completely manual
@@ -18,7 +26,7 @@ This whole process is:
 
 We can do better than that. Enter... Vaxiin!
 
-### What is Vaxiin?
+### So what is Vaxiin?
 
 **Vaxiin is an out-of-band automation framework** allowing for remote state extraction, human and machine recovery emulation, and failure detection. Each of these features can be used independently, but they really shine when combined to create an **autonamous zombie recovery machine**.
 
@@ -26,11 +34,14 @@ We can do better than that. Enter... Vaxiin!
 
 **Zombies are servers** that are reachable out-of-band via their BMC (thus they’re alive), but have no accessible OS running (thus they’re dead). Which makes them “living dead servers”, aka “zombies”. By forcing you to manually recover them from this state, they feed on your brain power. How cunning of them.
 
+### So what can Vaxiin do for me?
+Great question! we cover the common use cases [here](../introduction/use-cases).
+
 ### Basic architecture of Vaxiin
 
 There are 2 components to Vaxiin:
-* **The Agent** runs on your servers while they’re alive. Its basic role is to send a simple ping to the Vaxiin server, as a form of a [dead man’s switch](https://en.wikipedia.org/wiki/Dead_man%27s_switch). It’s what allows Vaxiin to run a fully automated zombie recovery process.
-* **The Server** handles all API calls from agents and operators. But you don’t need to interact with it directly - that’s what the CLI is there for.
+* **The Agent** runs on your servers while they’re alive. Its basic role is to send a simple ping to the Vaxiin server, as a form of a [dead man’s switch](https://en.wikipedia.org/wiki/Dead_man%27s_switch). You only need it when you want Vaxiin to **automatically recover zombies in the background**.
+* **The Server** handles all API calls from agents and operators. But you don’t need to interact with it directly - that’s what the [CLI](../cli-reference/overview) is there for.
 
 ### And the name, Vaxiin?
 
@@ -47,4 +58,4 @@ Sure, here's a short demo of the following actions:
 
 ### Okay, I've heard enough - I want to try it
 
-You can jump ahead to [quick start guide](../getting-started/quick-start) to get up and running in a few minutes.
+Great! Jump ahead to [the quick start guide](../getting-started/quick-start) to get up and running in a few minutes - you don't even need test hardware.
