@@ -39,8 +39,8 @@ We can do better than that. Enter... Vaxiin!
 Great question! Vaxiin lets you:
 - [Get a screenshot from the CLI](../introduction/use-cases#get-a-screenshot-from-the-cli).
 - [Abstract credentials away](../introduction/use-cases#abstract-credentials-away).
-- [Run IPMI commands](../introduction/use-cases#run-ipmi-commands-without-the-million-flags) easily.
-- ...and [HTTP calls](../cli-reference/create#request).
+- [Run IPMI commands](../introduction/use-cases#run-ipmi-commands-without-the-million-flags easily).
+- ...and [make HTTP calls](../cli-reference/create#request).
 - ...and [send keystrokes](../cli-reference/create#keystroke).
 - ...even [automatically](../cli-reference/create#rule)!
 
