@@ -35,13 +35,16 @@ We can do better than that. Enter... Vaxiin!
 **Zombies are servers** that are reachable out-of-band via their BMC (thus they’re alive), but have no accessible OS running (thus they’re dead). Which makes them “living dead servers”, aka “zombies”. By forcing you to manually recover them from this state, they feed on your brain power. How cunning of them.
 
 ### So what can Vaxiin do for me?
-Great question! we cover the common use cases [here](../introduction/use-cases).
 
-### Basic architecture of Vaxiin
+Great question! Vaxiin lets you:
+- [Get a screenshot from the CLI](../introduction/use-cases#get-a-screenshot-from-the-cli).
+- [Abstract credentials away](../introduction/use-cases#abstract-credentials-away).
+- [Run IPMI commands](../introduction/use-cases#run-ipmi-commands-without-the-million-flags) easily.
+- ...and [HTTP calls](../cli-reference/create#request).
+- ...and [send keystrokes](../cli-reference/create#keystroke).
+- ...even [automatically](../cli-reference/create#rule)!
 
-There are 2 components to Vaxiin:
-* **The Agent** runs on your servers while they’re alive. Its basic role is to send a simple ping to the Vaxiin server, as a form of a [dead man’s switch](https://en.wikipedia.org/wiki/Dead_man%27s_switch). You only need it when you want Vaxiin to **automatically recover zombies in the background**.
-* **The Server** handles all API calls from agents and operators. But you don’t need to interact with it directly - that’s what the [CLI](../cli-reference/overview) is there for.
+Check out the [use cases](../introduction/use-cases) to learn more.
 
 ### And the name, Vaxiin?
 
@@ -55,6 +58,12 @@ Sure, here's a short demo of the following actions:
 - create a rule to automate zombie recovery
 
 ![Vaxiin demo](/img/vaxctl_usage_33.gif)
+
+### Basic architecture of Vaxiin
+
+There are 2 components to Vaxiin:
+* **The Server** handles all API calls from agents and operators. You to interact with it through the [CLI](../cli-reference/overview). And yes, it can run [on your laptop](../getting-started/quick-start).
+* **The Agent (optional)** runs on your servers while they’re alive. Its basic role is to send a simple ping to the Vaxiin server, as a form of a [dead man’s switch](https://en.wikipedia.org/wiki/Dead_man%27s_switch). You only need it when you want Vaxiin to automatically recover zombies in the background.
 
 ### Okay, I've heard enough - I want to try it
 
