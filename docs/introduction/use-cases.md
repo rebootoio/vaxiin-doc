@@ -68,6 +68,10 @@ With Vaxiin, everyone on your team can share IPMI, HTTP and keystroke actions. A
 
 Combining all of the basic use cases with Vaxiin's regex matching capabilities, and the agent's dead-man-switch gives us... an automated way to recover zombies. But what *exactly* do we mean by that? lets review a few high level use cases.
 
+### Secure boot
+
+You set a boot password for your secure server. And a drive password too. The server rebooted and now you have to enter the passwords manually. If only you could do this automatically over out-of-band... the server wouldn't be eating your brains.
+
 ### Press F1 to continue
 
 It rebooted. But for some reason it won’t go back to the OS till you “press F1, F2, F12 or Ctrl-Alt-Shift-Z”. Maybe the RAID battery is low. Maybe there’s some super important warning message you just have to see before booting. Or maybe it wants to eat your brains.
