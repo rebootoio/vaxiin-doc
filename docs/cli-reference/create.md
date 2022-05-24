@@ -106,14 +106,16 @@ The action_data value can include attributes that will populated according to th
 
 The synatx is `{BASE_KEY::NESTED_KEY}`. Available attributes:
 
-| BASE KEY | NESTED KEY | DEFINED BY | DESCRIPTION                                            | USAGE               |
-|----------|------------|------------|--------------------------------------------------------|---------------------|
-| device   | uid        | System     | the device's UID                                       | {device::uid}       |
-| device   | ipmi_ip    | System     | the device's ipmi IP                                   | {device::ipmi_ip}   |
-| device   | model      | System     | the device's model                                     | {device::model}     |
-| cred     | username   | System     | the device's cred username                             | {cred::username}    |
-| cred     | password   | System     | the device's cred password                             | {cred::password}    |
-| metadata | *          | User       | the value of the nested key from the device's metadata | {metadata::ANY_KEY} |
+| BASE KEY   | NESTED KEY          | DEFINED BY | DESCRIPTION                                            | USAGE                             |
+|------------|---------------------|------------|--------------------------------------------------------|-----------------------------------|
+| device     | uid                 | System     | the device's UID                                       | {device::uid}                     |
+| device     | ipmi_ip             | System     | the device's ipmi IP                                   | {device::ipmi_ip}                 |
+| device     | model               | System     | the device's model                                     | {device::model}                   |
+| cred       | username            | System     | the device's cred username                             | {cred::username}                  |
+| cred       | password            | System     | the device's cred password                             | {cred::password}                  |
+| metadata   | *                   | User       | the value of the nested key from the device's metadata | {metadata::ANY_KEY}               |
+| cred_store | CRED_NAME::username | System     | a username from an existing cred                       | {cred_store::CRED_NAME::username} |
+| cred_store | CRED_NAME::username | System     | a password from an existing cred                       | {cred_store::CRED_NAME::password} |
 
 
 ## DEVICE
