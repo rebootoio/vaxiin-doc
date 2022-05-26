@@ -66,7 +66,7 @@ With Vaxiin, everyone on your team can share IPMI, HTTP and keystroke actions. A
 
 ## The Advanced
 
-Combining all of the basic use cases with Vaxiin's regex matching capabilities, and the agent's dead-man-switch gives us... an automated way to recover zombies. But what *exactly* do we mean by that? lets review a few high level use cases.
+Combining all of the basic use cases with Vaxiin's regex matching capabilities, and the agent's dead-man-switch gives us... **an automated way to recover zombies**. But what *exactly* do we mean by that? lets review a few high level use cases.
 
 ### Secure boot
 

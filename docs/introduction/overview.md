@@ -7,15 +7,23 @@ slug: /
 
 ### Why Vaxiin?
 
-Because:
-- You want to **see what's on-screen via out-of-band... from your command line**.
-- You want to **react to what's on-screen without having to open a web interface**.
-- You don't want to deal with **out-of-band authentication across vendors**.
-- You don't want to deal with **ipmitool semantics**.
-- You'd rather be doing something else instead of **"pre-OS recovery"**.
+**Because [zombie servers](#wait-what-zombies) cost you money** - they take up **power, space** and **manual labor** to recover.
+This manual labor is like "asking the chef to do the dishes" - not the best use of said chef's time.
+Instead, we suggest [using a dishwasher](../introduction/use-cases#the-advanced).
 
-### Pre-OS recovery?
-**When a server fails to boot into the OS or lacks in-band networking capabilities we call its state "pre-OS".** To recover a system from this state, you would typically have to connect to its out-of-band management, review what is on screen, and follow a recovery procedure.
+And besides, you also:
+
+- Want to **see what's on-screen via out-of-band... from your command line**.
+- Want to **react to what's on-screen** without having to open a web interface.
+- Don't want to deal with **out-of-band authentication across vendors**.
+- Don't want to deal with **ipmitool semantics**.
+- Don't wnat to deal with **recovering zombie servers**.
+
+### Wait, what? Zombies?
+
+**Zombies are servers** that are **reachable out-of-band** via their BMC (thus they’re alive), but have **no accessible OS** running (thus they’re dead). Which makes them “living dead servers”, aka “zombies”. By forcing you to manually recover them from this state, they feed on your brain power. How cunning of them.
+
+To recover a zombie server you would typically have to connect to its out-of-band management, review what is on screen, and follow a recovery procedure.
 
 This whole process is:
 * Completely manual
@@ -30,18 +38,15 @@ We can do better than that. Enter... Vaxiin!
 
 **Vaxiin is an out-of-band automation framework** allowing for remote state extraction, human and machine recovery emulation, and failure detection. Each of these features can be used independently, but they really shine when combined to create an **autonamous zombie recovery machine**.
 
-### Wait, what? Zombies?
-
-**Zombies are servers** that are reachable out-of-band via their BMC (thus they’re alive), but have no accessible OS running (thus they’re dead). Which makes them “living dead servers”, aka “zombies”. By forcing you to manually recover them from this state, they feed on your brain power. How cunning of them.
-
 ### So what can Vaxiin do for me?
 
 Great question! Vaxiin lets you:
 - [Get a screenshot from the CLI](../introduction/use-cases#get-a-screenshot-from-the-cli).
 - [Abstract credentials away](../introduction/use-cases#abstract-credentials-away).
-- [Run IPMI commands](../introduction/use-cases#run-ipmi-commands-without-the-million-flags easily).
+- [Run IPMI commands](../introduction/use-cases#run-ipmi-commands-without-the-million-flags-easily).
 - ...and [make HTTP calls](../cli-reference/create#request).
 - ...and [send keystrokes](../cli-reference/create#keystroke).
+- ...and [input credentials](../cli-reference/create#action_data).
 - ...even [automatically](../cli-reference/create#rule)!
 
 Check out the [use cases](../introduction/use-cases) to learn more.

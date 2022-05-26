@@ -102,6 +102,8 @@ The available action types are:
   action_data: http://myjenkins:8080/job/My-Clenaup-Job/buildWithParameters?UID={device::uid}&token=iFBDOBhNhaxL4T9ass93HRXun2JF161Z
   ```
 
+#### action_data
+
 The action_data value can include attributes that will populated according to the device the action is running on.
 
 The synatx is `{BASE_KEY::NESTED_KEY}`. Available attributes:
