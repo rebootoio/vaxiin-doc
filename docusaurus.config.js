@@ -64,6 +64,11 @@ const config = {
             label: 'About us',
           },
           {
+            href: 'https://discord.gg/aEJ6qwcCGs',
+            position: 'right',
+            label: 'Discord',
+          },
+          {
             href: 'https://github.com/rebootoio/vaxiin-sandbox',
             label: 'GitHub',
             position: 'right',
