@@ -13,6 +13,8 @@ We currently support the following models:
 | HPE        | ilo5   |
 | HPE        | ilo4   |
 | SuperMicro | x10    |
+| Lenovo     | xcc    |
+| Lenovo     | imm2   |
 
 So if your server is a SuperMicro x10, you would use the following key/value:
 ```
