@@ -35,10 +35,6 @@ const config = {
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
-	gtag: {
-          trackingID: 'G-BJZT0J79LJ',
-	  anonymizeIP: true,
-        },
       }),
     ],
   ],
@@ -58,11 +54,6 @@ const config = {
 	    label: 'Vaxiin Blog',
 	    position: 'left',
 	  },
-          {
-            href: 'https://rebooto.io/about',
-            position: 'right',
-            label: 'About us',
-          },
           {
             href: 'https://discord.gg/aEJ6qwcCGs',
             position: 'right',
